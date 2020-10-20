@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Darg and drop</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="root">
+	
+	<canvas id="c" width="700" height="600" style="border:1px solid #ccc"></canvas>
+	
+	<div class="catlogCont">
+		
+		<div id="room" class='catalog' draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'room')" >Room</div>
+		<div id="bed" class='catalog' draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'bed')" >Bed</div>
+		<div id="table" class='catalog' draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'table')" >Table</div>
+		<div id="chair" class='catalog' draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'chair')" >Chair</div>
+		<div id="circle" class='catalog' draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'circle')" >Circle</div>
+	
+	</div>
+
+</div>
+
+
+
+<script src="js/fabric.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
