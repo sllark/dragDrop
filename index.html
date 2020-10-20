@@ -8,17 +8,24 @@
 </head>
 <body>
 
+<script>
+    function dragstart_handler(ev) {
+        // Set the drag's format and data. Use the event target's id for the data
+        ev.dataTransfer.setData("text/plain", ev.target.id);
+    }
+
+</script>
 <div class="root">
 	
 	<canvas id="c" width="700" height="600" style="border:1px solid #ccc"></canvas>
 	
 	<div class="catlogCont">
 		
-		<div id="room" class='catalog' draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'room')" >Room</div>
-		<div id="bed" class='catalog' draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'bed')" >Bed</div>
-		<div id="table" class='catalog' draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'table')" >Table</div>
-		<div id="chair" class='catalog' draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'chair')" >Chair</div>
-		<div id="circle" class='catalog' draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'circle')" >Circle</div>
+		<div id="bed" class='catalog' draggable="true" ondragstart="dragstart_handler(event);" >Bed</div>
+		<div id="table" class='catalog' draggable="true" ondragstart="dragstart_handler(event);">Table</div>
+		<div id="room" class='catalog' draggable="true" ondragstart="dragstart_handler(event);" >Room</div>
+		<div id="chair" class='catalog' draggable="true" ondragstart="dragstart_handler(event);" >Chair</div>
+		<div id="circle" class='catalog' draggable="true" ondragstart="dragstart_handler(event);">Circle</div>
 	
 	</div>
 

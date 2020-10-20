@@ -318,6 +318,8 @@ function setInteriorData(ele, room = null) {
 
 function eleDropHandler(e) {
 
+    e.e.preventDefault();
+    console.log(e.e.dataTransfer.getData("text"));
     var catType = e.e.dataTransfer.getData("text"),
         {x, y} = e.e,
         pEle;
